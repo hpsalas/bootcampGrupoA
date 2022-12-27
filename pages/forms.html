@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Formularios</h1>
+        <nav>
+            <a href="../index.html">Volver</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form action="./alta-persona.html"
+                action="GET">
+                <!--GET hace que los elementos que escriba va a aparecer con su nombre y su valor en la URL-->
+                <label for="txtNombre"> <!--El for hace que se active la caja de texto cuando se cliquea sobre la etiqueta.-->
+                    Nombre:
+                </label> <!--es inline xq ocupa solo el espacio del texto (Nombre) (van un al lado del otro)-->
+                <!--agrego el atributo name para enviar el dato-->
+                <!--El required obliga a tener el valor al hacer el submmit-->
+                <input 
+                    id="txtNombre"
+                    type="text" 
+                    name="nombre"
+                    required
+                    placeholder="tu nombre:">
+                <input 
+                    type="hidden"
+                    name="hiddenValue"
+                    value="valorOculto">    
+                <!--las etiquetas vacías no tienen cierre, pero se les puede poner si se quiere-->
+                <br>
+                <label for="txtEdad">Edad:</label>
+                 <!--valida por min y max a hacer el submit-->
+                <input 
+                    id="txtEdad"    
+                    type="number" 
+                    min="0"  
+                    max="120"
+                    name="edad">
+                    <label for="txtDate">
+                <br>
+                <label for="txtDate">Fecha de nacimiento:</label>
+                <input
+                    id="txtDate"
+                    type="date"
+                    name="fecha"
+                    required
+                >
+                <br>
+                <label>Genero:</label>
+                <!--Si no se pone el name, se puede seleccionar más de uno. Caso contrario, no-->
+                Masculino:
+                <input 
+                    name="genero" 
+                    type="radio"
+                    value="M">
+                Femenino:
+                <input 
+                    name="genero" 
+                    type="radio" 
+                    value="F">
+                Raro:
+                <input 
+                    name="genero" 
+                    type="radio" 
+                    value="R"
+                >
+                <br>
+                <label>Generos pelis favoritas</label>       
+                <input 
+                    type="checkbox"
+                    name="terror"
+                    value="Terror">
+                <input 
+                    type="checkbox"
+                    name="comedia"
+                    value="Comedia">
+                <input 
+                    type="checkbox"
+                    name="drama"
+                    value="Drama">
+                <br>
+                <label>Foto perfil</label>
+                <input type="file">      
+                <br>
+                <label>Email:</label>
+                <!--pide el @-->
+                <input type="email">  
+               
+                <br>
+                    <input 
+                        type="submit"
+                        id="idButton"
+                        value="ENVIAR"
+                    >
+                
+                
+                <p>lorem</p><!--es block xq ocupa todo el espacio del bloque-->
+            </form>
+            <section>
+                <h1>Buscador</h1>
+                <form>
+                    <label for="txtBuscador">Buscador</label>
+                    <input 
+                        id="txtBuscador"
+                        type="search"
+                        >  <!--se pone una "x" al ingresar texto-->
+                </form>
+            </section>
+            
+        </section>
+    </main>
+</body>
+
+</html>
